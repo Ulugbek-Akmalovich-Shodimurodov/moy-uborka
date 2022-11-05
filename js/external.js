@@ -49,7 +49,7 @@ const renderFunction = (array = portfolioData) => {
 
 // Fetch get
 
-fetch('https://serviceproject1.herokuapp.com/main/get-external-blog')
+fetch('https://serviceproject2.herokuapp.com/main/get-external-blog')
 .then(res=>res.json())
 .then(data =>{
         renderFunction(data);
@@ -116,11 +116,11 @@ modalBtn.addEventListener('click', (e)=>{
         name: elFirstName.value.trim() ,
         surname: elLastName.value.trim() ,
         phone_number: elPhoneNum.value.trim() ,
-        passport_seria: elPassData.value.trim() ,
+        address: elPassData.value.trim() ,
         order: orderId
     }
 
-    postData('https://serviceproject1.herokuapp.com/client/external-client-create', data)
+    postData('https://serviceproject2.herokuapp.com/client/external-client-create', data)
     .then((data) => {
       console.log(data);
     });

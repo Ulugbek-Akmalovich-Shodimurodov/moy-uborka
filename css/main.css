@@ -398,6 +398,22 @@ ul, li {
   gap: 30px;
 }
 
+.site-navbar__list-item a {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  pointer-events: all;
+}
+.site-navbar__list-item a:hover {
+  padding: 4px 9px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background: #fff;
+  color: #153C3C !important;
+}
+
 .site-navbar__list-item-btn {
   position: absolute;
   right: 0;
@@ -548,6 +564,21 @@ ul, li {
   padding: 20px;
 }
 
+.servicePage-list__title {
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.servicePage-list__text {
+  max-width: 100%;
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .servicePage-list__item-link {
   width: 100%;
   padding: 5px;
@@ -562,6 +593,32 @@ ul, li {
 .servicePage-list__item-link:hover {
   background: rgb(49, 222, 6);
   color: #fff;
+}
+
+.company__section-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.company-title {
+  font-size: 60px;
+  color: #fff;
+}
+
+.company-desc {
+  font-size: 16px;
+  color: #fff;
+}
+
+.company-location, .company-adress {
+  font-size: 26px;
+  color: #fff;
+}
+
+.company-maps {
+  width: 100%;
 }
 
 /* footer */

@@ -49,7 +49,7 @@ const renderFunction = (array = portfolioData) => {
 
 // Fetch get
 
-fetch('https://serviceproject1.herokuapp.com/main/get-external-blog')
+fetch('https://serviceproject2.herokuapp.com/main/get-internal-blog')
 .then(res=>res.json())
 .then(data =>{
         renderFunction(data);
@@ -108,6 +108,7 @@ async function postData(url = '', data = {}) {
   }
 
   // zakazat modal
+  
 
 modalBtn.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -115,19 +116,19 @@ modalBtn.addEventListener('click', (e)=>{
     let data = {
         name: elFirstName.value.trim() ,
         surname: elLastName.value.trim() ,
-        phone_number: elPhoneNum.value.trim() ,
-        passport_seria: elPassData.value.trim() ,
+        phone_number: elPhoneNum.value.trim() ,    	
+        address: elPassData.value.trim() ,
         order: orderId
     }
-
-    postData('https://serviceproject1.herokuapp.com/client/external-client-create', data)
+    console.log(data);
+    postData('https://serviceproject2.herokuapp.com/client/internal-client-create', data)
     .then((data) => {
       console.log(data);
     });
 
     closeModal();
 
-    modalForm.reset()
+    // modalForm.reset()
 
 
 

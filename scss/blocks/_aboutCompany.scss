@@ -1,0 +1,25 @@
+
+.company__section-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+.company-title{
+    font-size: 60px;
+
+    color: #fff;
+}
+.company-desc{
+    font-size: 16px;
+    
+    color: #fff;
+}
+.company-location, .company-adress{
+    font-size: 26px;
+
+    color: #fff;
+}
+.company-maps{
+    width: 100%;
+}
