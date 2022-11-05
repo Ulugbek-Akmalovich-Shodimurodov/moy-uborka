@@ -23,5 +23,5 @@ function openModalList(e){
 }
 
 cardListBtn.addEventListener('click', openModalList);
-modalBtn.addEventListener('click', closeModal);
+// modalBtn.addEventListener('click', closeModal);
 modalClose.addEventListener('click', closeModal);

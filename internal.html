@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dars-9</title>
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -51,104 +50,7 @@
             <h2 class="section-title">
               Уборка внутри дома
             </h2>
-            <ul class="servicePage-list">
-              <li class="servicePage-list__item">
-                <img src="./img/carousel1.jpg" alt="">
-                <div class="servicePage-list__item-body">
-                  <h3 class="servicePage-list__title">
-                    Xona ichkini tozalash
-                  </h3>
-                  <p class="servicePage-list__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
-                  </p>
-                  <button href="#" class="servicePage-list__item-link">Заказать</button>
-                </div>
-              </li>
-              <li class="servicePage-list__item">
-                <img src="./img/carousel1.jpg" alt="">
-                <div class="servicePage-list__item-body">
-                  <h3 class="servicePage-list__title">
-                    Xona ichkini tozalash
-                  </h3>
-                  <p class="servicePage-list__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
-                  </p>
-                  <button href="#" class="servicePage-list__item-link">Заказать</button>
-                </div>
-              </li>
-              <li class="servicePage-list__item">
-                <img src="./img/carousel1.jpg" alt="">
-                <div class="servicePage-list__item-body">
-                  <h3 class="servicePage-list__title">
-                    Xona ichkini tozalash
-                  </h3>
-                  <p class="servicePage-list__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
-                  </p>
-                  <button href="#" class="servicePage-list__item-link">Заказать</button>
-                </div>
-              </li>
-              <li class="servicePage-list__item">
-                <img src="./img/carousel1.jpg" alt="">
-                <div class="servicePage-list__item-body">
-                  <h3 class="servicePage-list__title">
-                    Xona ichkini tozalash
-                  </h3>
-                  <p class="servicePage-list__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
-                  </p>
-                  <button href="#" class="servicePage-list__item-link">Заказать</button>
-                </div>
-              </li>
-              <li class="servicePage-list__item">
-                <img src="./img/carousel1.jpg" alt="">
-                <div class="servicePage-list__item-body">
-                  <h3 class="servicePage-list__title">
-                    Xona ichkini tozalash
-                  </h3>
-                  <p class="servicePage-list__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
-                  </p>
-                  <button href="#" class="servicePage-list__item-link">Заказать</button>
-                </div>
-              </li>
-              <li class="servicePage-list__item">
-                <img src="./img/carousel1.jpg" alt="">
-                <div class="servicePage-list__item-body">
-                  <h3 class="servicePage-list__title">
-                    Xona ichkini tozalash
-                  </h3>
-                  <p class="servicePage-list__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
-                  </p>
-                  <button href="#" class="servicePage-list__item-link">Заказать</button>
-                </div>
-              </li>
-              <li class="servicePage-list__item">
-                <img src="./img/carousel1.jpg" alt="">
-                <div class="servicePage-list__item-body">
-                  <h3 class="servicePage-list__title">
-                    Xona ichkini tozalash
-                  </h3>
-                  <p class="servicePage-list__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
-                  </p>
-                  <button href="#" class="servicePage-list__item-link">Заказать</button>
-                </div>
-              </li>
-              <li class="servicePage-list__item">
-                <img src="./img/carousel1.jpg" alt="">
-                <div class="servicePage-list__item-body">
-                  <h3 class="servicePage-list__title">
-                    Xona ichkini tozalash
-                  </h3>
-                  <p class="servicePage-list__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
-                  </p>
-                  <button href="#" class="servicePage-list__item-link">Заказать</button>
-                </div>
-              </li>              
-            </ul>
+            <ul class="servicePage-list"></ul>
           </div>
         </div>
       </section>
@@ -159,29 +61,46 @@
         <div class="popup">
           <h2 class="modal-title"></h2>
           <form class="modal-form">
-            <label for="title">Ism Sharifingiz</label>
-            <input type="text" id="title" placeholder="person">
-            <label for="passport">Passport seriya raqamingiz</label>
-            <input type="text" id="passport" placeholder="AA 1234567">
-            <label for="tel">Telefon raqamingiz</label>
+            <label for="title">Имя</label>
+            <input type="text" id="title" placeholder="абс....">
+            <label for="ltitle">Фамилия</label>
+            <input type="text" id="ltitle" placeholder="абс....">
+            <label for="passport">Адрес</label>
+            <input type="text" id="passport" placeholder="город, ул. дом">
+            <label for="tel">Тел:</label>
             <input type="number" id="tel" placeholder="+998 90 123 45 67" maxlength="13">
-            <label for="tel">Tozalash maydoni (kv metr)</label>
-            <input type="number" id="tel" placeholder="100">
-            <button href="#" class="servicePage-list__item-link">Заказать</button>
+            <button class="servicePage-list__item-link" id="modal-btn__zakaz">Заказать</button>
           </form>
         </div>
       </div>
 
+      <!-- template card -->
+
+      <template id="product-template">
+        <li class="servicePage-list__item">
+          <img class="service-card__img" src="./img/carousel1.jpg" alt="">
+          <div class="servicePage-list__item-body">
+            <h3 class="servicePage-list__title">
+              Xona ichkini tozalash
+            </h3>
+            <p class="servicePage-list__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
+            </p>
+            <button href="#" class="servicePage-list__item-link">Заказать</button>
+          </div>
+        </li>
+      </template> 
+
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="footer-id">
     <div class="container">
       <div class="footer__box">
         <ul class="footer-list">
           <li class="footer-menu__list-item">
-            <a class="footer-logo" href="./index.html">Build a beautiful <br> product with Align</a>
+            <p class="footer-logo" href="./index.html">Чистота вместе <br> с нами !!!</p>
             <p class="footer-text">
-              Align contains all the pages and sections needed to create beautiful digital products with ease.
+              Подписывайтесь на нас
             </p>
             <ul class="footer-contact__list">
               <li class="footer-contact__list-item">
@@ -207,52 +126,25 @@
           <li class="footer-menu__list-item">
             <ul>
               <li class="footer-list__item-title">
-                <h4>Product</h4>
+                <h4>Cтраницы</h4>
               </li>
               <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">About Us</a>
+                <a class="footer-list__pages-link" href="./index.html">Главная странитца</a>
               </li>
               <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">Blog</a>
+                <a class="footer-list__pages-link" href="#footer-id">Контакт</a>
+              </li>
+              <li class="footer-list__list-item">
+                <a class="footer-list__pages-link" href="./aboutCompany.html">о компании</a>
               </li>
             </ul>
           </li>
           <li class="footer-menu__list-item">
             <ul>
               <li class="footer-list__item-title">
-                <h4>Features</h4>
+                <img class="footer-qr__code" src="./img/QR.jpg" alt="">
               </li>
-              <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">Smart Watch</a>
-              </li>
-              <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">Head Phone</a>
-              </li>
-              <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">Home security</a>
-              </li>
-              <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">Smart Lock</a>
-              </li>
-            </ul>
-          </li>
-          <li class="footer-menu__list-item">
-            <ul>
-              <li class="footer-list__item-title">
-                <h4>About Us</h4>
-              </li>
-              <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">Who we are</a>
-              </li>
-              <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">Contact us</a>
-              </li>
-              <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">support</a>
-              </li>
-              <li class="footer-list__list-item">
-                <a class="footer-list__pages-link" href="#">FAQ</a>
-              </li>
+              
               
             </ul>
           </li>
@@ -260,26 +152,12 @@
       </div>
       <div class="footer-end">
         <a class="footer-logotip" href="./index.html">LOGO</a>
-        <p class="footer-end__text">
-          | © Template by
-          <a href="#">Flowbase</a>
-          - Powered by
-          <a href="#">Webflow</a>
-        </p>
-        <ul class="footer-link__list">
-          <li class="footer-link__list-item">
-            <a href="#" class="footer-link__list-link">Overview</a>
-          </li>
-          <li class="footer-link__list-item">
-            <a href="#" class="footer-link__list-link">Pages</a>
-          </li>
-        </ul>
       </div>
     </div>
   </footer>
 
-  <script src="./js/bootstrap.min.js"></script>
   <script src="./js/header.js"></script>
+  <script src="./js/internal.js"></script>
   <script src="./js/modal.js"></script>
 
 </body>

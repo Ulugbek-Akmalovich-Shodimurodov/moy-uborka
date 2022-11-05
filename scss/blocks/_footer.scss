@@ -22,6 +22,7 @@
     padding: 20px;
 }
 .footer-logo{
+    margin-top: -30px;
     font-style: normal;
     font-weight: 400;
     font-size: 38px;
@@ -31,14 +32,15 @@
 
     color: #fff;
 
-    background-image: url(../../img/footer-logo__bg.png);
     background-repeat: no-repeat;
     background-position: bottom right;
 }
 .footer-text{
     width: 250px;
+    
+
     font-weight: 400;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 150%;
 
     color: #fff;
@@ -164,6 +166,7 @@
         justify-content: start   ;
     }
     .footer-logo{
+        margin: -200px;
         font-size: 30px;
     }
     

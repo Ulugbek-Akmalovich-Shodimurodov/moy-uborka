@@ -7,6 +7,8 @@
     gap: 30px;
     flex-wrap: wrap;
 
+    pointer-events: none;
+
 }
 .servicePage-list__item{
     width: 280px;
@@ -41,6 +43,8 @@
     box-shadow: 6px 17px 22px -3px rgba(34, 60, 80, 0.2);
 
     display: block;
+
+    pointer-events: all;
 
 
     &:hover{
