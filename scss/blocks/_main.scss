@@ -13,15 +13,16 @@
     color: #fff;
 }
 .service-list__item{
-    border-radius: 6px;
+    border-radius: 6px !important;
 }
 .carousel-item{
+    min-height: 300px !important;
     text-align: center !important;
 
     border-radius: 6px !important;
 }
 .carousel-img{
-    height: 100% !important;
+    min-height: 300px !important;
     max-height: 680px;
 
     border-radius: 6px;
