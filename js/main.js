@@ -1,10 +1,10 @@
-
+"use strict"
 let carouselInner = document.querySelector('.carousel-inner')
 
 fetch('https://developer1.pythonanywhere.com/main/announcement-list')
 .then(res=>res.json())
 .then(data =>{
-        renderCarousel(data);
+        data ? renderCarousel(data) : ''
     }
 ).catch((err)=> console.log(err))
 
@@ -23,5 +23,4 @@ function renderCarousel(data){
             </div>
         </div>`
     })
-
 }
