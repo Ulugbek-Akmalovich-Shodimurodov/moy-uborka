@@ -494,7 +494,6 @@ ul, li {
 }
 
 .carousel-item {
-  min-height: 300px !important;
   text-align: center !important;
   border-radius: 6px !important;
 }
