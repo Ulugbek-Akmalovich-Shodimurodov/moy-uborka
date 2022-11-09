@@ -92,7 +92,13 @@ cardList.addEventListener('click', (e)=>{
     console.log(e.target.parentElement.parentElement.id);
 
     orderId = e.target.parentElement.parentElement.id
+    cardId = Number(e.target.id);
+    console.log(cardId, e.target);
 
+    cardId ? window.location.href = '../deTailedPage.html' : '';
+
+    localStorage.setItem('cardId', JSON.stringify(cardId))
+    
     e.target.id  ==  'mdlBtn' ? openModalList() : 0
 })
 
