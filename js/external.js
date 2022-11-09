@@ -148,7 +148,7 @@ async function postData(url = '', data = {}) {
       (data.name[0] == 'This field may not be blank.' && data.surname[0] == 'This field may not be blank.') ? alert('Произошло ошибка ведите данные заново') : alert("Ваш заказ принет! В кратчайшие сроки наш оператор позвонит.")
       console.log(data.name[0]);
     }).catch((err)=>{
-        alert(err, 'error')
+        alert('Произошло ошибка ведите данные заново')
     });
 
     console.log(Boolean(data.name && data.surname && data.phone_number && data.address));
