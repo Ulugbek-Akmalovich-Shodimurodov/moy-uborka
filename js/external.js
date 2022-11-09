@@ -17,7 +17,6 @@ let cardId;
 /* form input */
 let modalForm = document.querySelector('.modal-form')
 let elFirstName = document.querySelector('#title')
-let elLastName = document.querySelector('#ltitle')
 let elPhoneNum = document.querySelector('#tel')
 let elPassData = document.querySelector('#passport')
 let comment = document.querySelector('#commint')
@@ -35,7 +34,7 @@ function portfolioCard(portfolioData){
     listItem.setAttribute('id', portfolioData.id)
 
     const cardImg = elProductCard.querySelector('.service-card__img');
-    cardImg.setAttribute('src', portfolioData.img1 ? `https://developer1.pythonanywhere.com/${portfolioData.img1}` : "../img/search.png")
+    cardImg.setAttribute('src', portfolioData.img ? `https://developer1.pythonanywhere.com/${portfolioData.img}` : "../img/search.png")
 
     const cardTitle = elProductCard.querySelector('.servicePage-list__title');
     cardTitle.textContent = portfolioData.title;
@@ -134,8 +133,7 @@ async function postData(url = '', data = {}) {
     e.preventDefault();
 
     let data = {
-        name: elFirstName.value.trim() ,
-        surname: elLastName.value.trim() ,
+        fullname: elFirstName.value.trim() ,
         phone_number: elPhoneNum.value.trim() ,
         address: elPassData.value.trim() ,
         comment: comment.value.trim() ,
@@ -145,15 +143,12 @@ async function postData(url = '', data = {}) {
 
     postData('https://developer1.pythonanywhere.com/client/external-client-create', data)
     .then((data) => {
-      (data.name[0] == 'This field may not be blank.' && data.surname[0] == 'This field may not be blank.') ? alert('Произошло ошибка ведите данные заново') : alert("Ваш заказ принет! В кратчайшие сроки наш оператор позвонит.")
-      console.log(data.name[0]);
+      (data.fullname[0] == 'This field may not be blank.') ? alert('Произошло ошибка ведите данные заново') : alert("Ваш заказ принет! В кратчайшие сроки наш оператор позвонит.")
     }).catch((err)=>{
         alert('Произошло ошибка ведите данные заново')
     });
 
-    console.log(Boolean(data.name && data.surname && data.phone_number && data.address));
-
-    data.name && data.surname && data.phone_number && data.address ? closeModal() : ''
+    data.fullname && data.phone_number && data.address ? closeModal() : ''
 
     modalForm.reset()
 

@@ -17,7 +17,6 @@ let cardId;
 /* form input */
 let modalForm = document.querySelector('.modal-form')
 let elFirstName = document.querySelector('#title')
-let elLastName = document.querySelector('#ltitle')
 let elPhoneNum = document.querySelector('#tel')
 let elPassData = document.querySelector('#passport')
 let comment = document.querySelector('#commint')
@@ -130,8 +129,7 @@ modalBtn.addEventListener('click', (e)=>{
     e.preventDefault();
 
     let data = {
-        name: elFirstName.value.trim() ,
-        surname: elLastName.value.trim() ,
+        fullname: elFirstName.value.trim() ,
         phone_number: elPhoneNum.value.trim() ,    	
         address: elPassData.value.trim() ,
         comment: comment.value.trim() ,
@@ -141,15 +139,13 @@ modalBtn.addEventListener('click', (e)=>{
     console.log(data);
     postData('https://developer1.pythonanywhere.com/client/internal-client-create', data)
     .then((data) => {
-      (data.name[0] == 'This field may not be blank.' && data.surname[0] == 'This field may not be blank.') ? alert('Произошло ошибка ведите данные заново') : alert("Ваш заказ принет! В кратчайшие сроки наш оператор позвонит.")
-      console.log(data.name[0]);
+      (data.fullname[0] == 'This field may not be blank.') ? alert('Произошло ошибка ведите данные заново') : alert("Ваш заказ принет! В кратчайшие сроки наш оператор позвонит.")
     }).catch((err)=>{
         alert('Произошло ошибка ведите данные заново')
     });
 
-    console.log(Boolean(data.name && data.surname && data.phone_number && data.address));
 
-    data.name && data.surname && data.phone_number && data.address ? closeModal() : ''
+    data.fullname && data.phone_number && data.address ? closeModal() : ''
 
     modalForm.reset()
 })
