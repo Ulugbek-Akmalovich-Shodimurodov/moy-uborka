@@ -12,10 +12,12 @@
 
     color: #fff;
 }
+.carousel-item{
+    text-align: center !important;
+}
 .carousel-img{
-    
-    height: auto;
-    max-height: 580px;
+    height: 100% !important;
+    max-height: 680px;
 }
 
 .service-section__box{

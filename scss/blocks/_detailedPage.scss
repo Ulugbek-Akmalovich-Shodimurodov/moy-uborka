@@ -1,0 +1,16 @@
+
+.card-detailed__box{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card-detailed__img{
+    max-width: 400px;
+    min-width: 270px;
+}
+.card-detailed__body{
+    max-width: 800px;
+
+    color: #fff;
+}

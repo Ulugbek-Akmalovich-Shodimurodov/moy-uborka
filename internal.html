@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dars-9</title>
+  <title>уборка в доме</title>
   <link rel="stylesheet" href="./css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -60,18 +60,22 @@
 
       <!-- MODAL -->
 
-      <div class="modal-container">
+      <div class="modal-container" id="mdnContaiiner">
         <div class="popup">
           <h2 class="modal-title"></h2>
           <form class="modal-form">
             <label for="title">Имя</label>
-            <input type="text" id="title" placeholder="абс....">
+            <input class="form__inp" type="text" id="title" placeholder="абс....">
             <label for="ltitle">Фамилия</label>
             <input type="text" id="ltitle" placeholder="абс....">
             <label for="passport">Адрес</label>
             <input type="text" id="passport" placeholder="город, ул. дом">
             <label for="tel">Тел:</label>
-            <input type="number" id="tel" placeholder="+998 90 123 45 67" maxlength="13">
+            <input type="number" id="tel" placeholder="90 123 45 67" maxlength="13">
+            <label for="date">Время уборки</label>
+            <input type="datetime-local" id="date" placeholder="12.12.1212">
+            <label for="commint">каминтария</label>
+            <input type="text" id="commint" placeholder="каминт">
             <button class="servicePage-list__item-link" id="modal-btn__zakaz">Заказать</button>
           </form>
         </div>
@@ -81,7 +85,9 @@
 
       <template id="product-template">
         <li class="servicePage-list__item">
-          <img class="service-card__img" src="./img/carousel1.jpg" alt="">
+          <div class="card-img__box">
+          <img class="service-card__img" src="./img/carousel1.jpg" alt="уборка в доме">
+          </div>
           <div class="servicePage-list__item-body">
             <h3 class="servicePage-list__title">
               Xona ichkini tozalash
@@ -89,7 +95,9 @@
             <p class="servicePage-list__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus.
             </p>
-            <button href="#" class="servicePage-list__item-link">Заказать</button>
+            <button href="#" 
+            id="mdlBtn"
+            class="servicePage-list__item-link">Заказать</button>
           </div>
         </li>
       </template> 

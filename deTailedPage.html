@@ -5,8 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dars-9</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
+
    <!-- Font -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,23 +20,23 @@
     <div class="container">
       <nav class="site-navbar">
 
-        <a href="./index.html" class="site-logo">LOGO</a>
+        <a href="./inDex.html" class="site-logo">LOGO</a>
 
         <ul class="site__navbar-list">
           <li class="site-navbar__list-item">
-            <a id="1" href="./index.html" class="site-navbar__list-link">Главная странитца</a>
+            <a href="./inDex.html" class="site-navbar__list-link">Главная странитца</a>
           </li>
           <li class="site-navbar__list-item">
-            <a id="2" href="#footer-id" class="site-navbar__list-link">Контакт</a>
+            <a href="#footer-id" class="site-navbar__list-link">Контакт</a>
           </li>
           <li class="site-navbar__list-item">
-            <a id="3" href="./huMans.html" class="site-navbar__list-link">Сотрудники</a>
+            <a href="./huMans.html" class="site-navbar__list-link">Сотрудники</a>
           </li>
           <li class="site-navbar__list-item">
-            <a id="4" href="./aboutCompany.html" class="site-navbar__list-link">о компании</a>
+            <a href="./aboutCompany.html" class="site-navbar__list-link">о компании</a>
           </li>
           <li class="site-navbar__list-item site-navbar__list-item-btn">
-            <a href="tel: +998971644994" class="site-navbar__list-link site-navbar__btn">вызов</a>
+            <a href="tel:+998971644994" class="site-navbar__list-link site-navbar__btn">вызов</a>
           </li>
         </ul>
 
@@ -46,20 +48,15 @@
 
   <main class="site-main">
     <div class="container">
-      <div class="company__section-box">
-        <h1 class="company-title">
-          <img src="#" alt="">
-          <span>
-            Company name
-          </span>
-        </h1>
-        <p class="company-desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sequi consequuntur delectus fuga nam iusto, corporis nobis, accusamus voluptatum quo laborum. Odio reiciendis voluptatem dicta atque vel soluta, nisi asperiores, quibusdam commodi incidunt eius! Ad nihil, cumque beatae aliquam, dicta inventore voluptates delectus ab, necessitatibus enim architecto soluta magni hic esse error quos dolorem quasi iste repellat? Libero voluptatum sint ipsum repellat est veniam accusantium quaerat mollitia, maiores voluptate cum esse odit molestias? Modi quas rem maiores! Rerum possimus iusto sapiente minus inventore sequi, accusantium explicabo nobis saepe esse, earum dolor optio totam reiciendis nulla aperiam hic, doloribus ex eos!
-        </p>
-        <a href="tel:+998971644994" class="company-location"><i class="fas fa-phone"></i><span> +998 97 164 49 94</span></a>
-        <span class="company-adress">Shahar. tuman. ko'cha uy.</span>
-        <iframe class="company-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11986.567283091861!2d69.2397136006685!3d41.316655000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b40d847941d%3A0x5765a18b352df71e!2sTashkent%20City%20Park!5e0!3m2!1sru!2s!4v1667683623843!5m2!1sru!2s" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+        <div class="card-detailed__box">
+            <img class="card-detailed__img"  src="./img/carousel1.jpg" alt="">
+            <div class="card-detailed__body">
+                <h4 class="card-detailed__ttile">title</h4>
+                <p class="card-detailed__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam natus ratione sunt nesciunt ut unde reprehenderit voluptatem iusto perferendis.
+                </p>
+            </div>
+        </div>
     </div>
   </main>
 
@@ -126,8 +123,9 @@
     </div>
   </footer>
 
+  <script src="./js/bootstrap.min.js"></script>
   <script src="./js/header.js"></script>
-  <!-- <script src="./js/main.js"></script> -->
+  <script src="./js/detailed.js"></script>
 
 </body>
 </html>
