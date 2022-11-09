@@ -12,12 +12,19 @@
 
     color: #fff;
 }
+.service-list__item{
+    border-radius: 6px;
+}
 .carousel-item{
     text-align: center !important;
+
+    border-radius: 6px !important;
 }
 .carousel-img{
     height: 100% !important;
     max-height: 680px;
+
+    border-radius: 6px;
 }
 
 .service-section__box{
