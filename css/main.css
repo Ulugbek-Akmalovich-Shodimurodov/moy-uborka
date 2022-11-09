@@ -815,7 +815,8 @@ ul, li {
   display: block;
 }
 .footer-logotip img {
-  width: 20px;
+  width: 100px;
+  margin-top: 15px;
 }
 
 .footer-end__text {
