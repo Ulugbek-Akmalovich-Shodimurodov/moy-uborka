@@ -12,7 +12,7 @@ function renderCard(){
    Cards.map(element => {
     if(element.id === cardId)  {
 
-        singleImg.setAttribute('src', `https://developer1.pythonanywhere.com/${element.img}`)
+        singleImg.setAttribute('src', `https://developer1.pythonanywhere.com/${element.img1}`)
         singlePageTitle.textContent = element.title
         singleText.textContent = element.description
 

@@ -12,6 +12,7 @@ let modalBtn = document.querySelector('#modal-btn__zakaz');
 let modalTitle = document.querySelector('.modal-title');
 let modalClose = document.querySelector('.modal-container')
 let orderId;
+let cardId;
 
 /* form input */
 let modalForm = document.querySelector('.modal-form')
@@ -58,6 +59,7 @@ const renderFunction = (array = portfolioData) => {
 fetch('https://developer1.pythonanywhere.com/main/get-external-blog')
 .then(res=>res.json())
 .then(data =>{
+    localStorage.setItem('cardData', JSON.stringify(data))
         renderFunction(data);
         console.log(data);
     }
