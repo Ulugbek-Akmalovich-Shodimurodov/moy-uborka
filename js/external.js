@@ -22,19 +22,16 @@ let elPassData = document.querySelector('#passport')
 let comment = document.querySelector('#commint')
 let cleaning_date = document.querySelector('#date')
 
-console.log(cleaning_date);
-
-
 function portfolioCard(portfolioData){
 
     const elProductCard = elCardTempalate.cloneNode(true).content;
-
-    
+ 
     const listItem = elProductCard.querySelector('.servicePage-list__item')
     listItem.setAttribute('id', portfolioData.id)
 
     const cardImg = elProductCard.querySelector('.service-card__img');
     cardImg.setAttribute('src', portfolioData.img ? `https://developer1.pythonanywhere.com/${portfolioData.img}` : "../img/search.png")
+    cardImg.setAttribute('alt', "Чистый дом")
 
     const cardTitle = elProductCard.querySelector('.servicePage-list__title');
     cardTitle.textContent = portfolioData.title;
@@ -44,7 +41,6 @@ function portfolioCard(portfolioData){
 
     return elProductCard;
 }
-
 const renderFunction = (array = portfolioData) => {
     cardList.innerHTML = "";
     array.map((item) => {
@@ -52,7 +48,6 @@ const renderFunction = (array = portfolioData) => {
         cardList.append(elNewCard);
     })
 }
-
 // Fetch get
 
 fetch('https://developer1.pythonanywhere.com/main/get-external-blog')
@@ -60,41 +55,28 @@ fetch('https://developer1.pythonanywhere.com/main/get-external-blog')
 .then(data =>{
     localStorage.setItem('cardData', JSON.stringify(data))
         renderFunction(data);
-        console.log(data);
     }
-).catch((err)=> console.log(err))
-
-
+).catch()
 // open modal
-
 function openModal(){
     popup.classList.add('open-popup');
     openMContainer.classList.add('modal-container__event');
 }
-
 function openModalList(e){
     popup.classList.add('open-popup');
     openModal();         
     openMContainer.classList.add('modal-container-open');
 }
-
 // close modal
-
 function closeModal(){
     popup.classList.remove('open-popup');
     openMContainer.classList.remove('modal-container-open');
     modalClose.classList.remove('modal-container__event');
 }
-
-
 // card zakazat btn func 
-
 cardList.addEventListener('click', (e)=>{
-    console.log(e.target.parentElement.parentElement.id);
-
     orderId = e.target.parentElement.parentElement.id
     cardId = Number(e.target.id);
-    console.log(cardId, e.target);
 
     cardId ? window.location.href = '../deTailedPage.html' : '';
 
@@ -122,7 +104,6 @@ async function postData(url = '', data = {}) {
   }
 
   modalForm.addEventListener('input', (e)=>{
-    console.log(e.target.value);
 
     e.target.value.trim() === '' ? e.target.classList.add('error-inp') : e.target.classList.remove('error-inp')
   })

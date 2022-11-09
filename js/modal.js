@@ -19,7 +19,6 @@ function openModalList(e){
     popup.classList.add('open-popup');
     openModal();         
     openMContainer.classList.add('modal-container-open');
-    console.log(e);
 }
 
 cardListBtn.addEventListener('click', openModalList);

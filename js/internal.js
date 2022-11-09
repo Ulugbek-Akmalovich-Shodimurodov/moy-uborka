@@ -33,6 +33,7 @@ function portfolioCard(portfolioData){
 
     const cardImg = elProductCard.querySelector('.service-card__img');
     cardImg.setAttribute('src', portfolioData.img ? `https://developer1.pythonanywhere.com/${portfolioData.img}` : "../img/search.png")
+    cardImg.setAttribute('alt',"Чистый дом")
 
     const cardTitle = elProductCard.querySelector('.servicePage-list__title');
     cardTitle.textContent = portfolioData.title;
@@ -59,7 +60,7 @@ fetch('https://developer1.pythonanywhere.com/main/get-internal-blog')
     localStorage.setItem('cardData', JSON.stringify(data))
         renderFunction(data);
     }
-).catch((err)=> console.log(err))
+).catch()
 
 
 // open modal
@@ -90,7 +91,6 @@ cardList.addEventListener('click', (e)=>{
 
     orderId = e.target.parentElement.parentElement.id
     cardId = Number(e.target.id);
-    console.log(cardId, e.target);
 
     cardId ? window.location.href = '../deTailedPage.html' : '';
 
@@ -118,7 +118,6 @@ async function postData(url = '', data = {}) {
   }
 
   modalForm.addEventListener('input', (e)=>{
-    console.log(e.target.value);
 
     e.target.value.trim() === '' ? e.target.classList.add('error-inp') : e.target.classList.remove('error-inp')
   })
@@ -136,7 +135,6 @@ modalBtn.addEventListener('click', (e)=>{
         cleaning_date: cleaning_date.value.trim() ,
         order: orderId
     }
-    console.log(data);
     postData('https://developer1.pythonanywhere.com/client/internal-client-create', data)
     .then((data) => {
       (data.fullname[0] == 'This field may not be blank.') ? alert('Произошло ошибка ведите данные заново') : alert("Ваш заказ принет! В кратчайшие сроки наш оператор позвонит.")
