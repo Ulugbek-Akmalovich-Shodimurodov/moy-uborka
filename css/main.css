@@ -505,6 +505,13 @@ ul, li {
   border-radius: 6px;
 }
 
+@media screen and (max-width: 400px) {
+  .carousel-img {
+    min-height: 260px !important;
+    max-height: 680px;
+    border-radius: 6px;
+  }
+}
 .service-section__box {
   width: 100%;
   padding: 40px 0;
