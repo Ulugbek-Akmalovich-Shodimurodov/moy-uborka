@@ -705,6 +705,9 @@ ul, li {
 }
 
 .company-location, .company-adress {
+  display: flex;
+  gap: 15px;
+  align-items: center;
   font-size: 26px;
   color: #fff;
 }
