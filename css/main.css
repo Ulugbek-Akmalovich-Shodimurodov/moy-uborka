@@ -554,6 +554,18 @@ ul, li {
   margin-bottom: 15px;
   text-align: left;
   color: #6fd649;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(49, 222, 6);
+  color: rgb(49, 222, 6);
+  background: #fff;
+  box-shadow: 6px 17px 22px -3px rgba(34, 60, 80, 0.2);
+  display: block;
+  pointer-events: all;
+}
+.service-list__link:hover {
+  background: rgb(49, 222, 6);
+  color: #fff;
 }
 
 .servicePage-list {
