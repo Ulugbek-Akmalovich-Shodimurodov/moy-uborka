@@ -805,8 +805,8 @@ ul, li {
 }
 
 .brend-icon {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -816,6 +816,10 @@ ul, li {
 
 .brend-icon:hover {
   opacity: 1;
+}
+
+.brend-icon__item {
+  font-size: 20px;
 }
 
 .brend-icon__item:hover {
