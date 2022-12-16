@@ -30,7 +30,7 @@ function portfolioCard(portfolioData){
     listItem.setAttribute('id', portfolioData.id)
 
     const cardImg = elProductCard.querySelector('.service-card__img');
-    cardImg.setAttribute('src', portfolioData.img ? `https://developer1.pythonanywhere.com/${portfolioData.img}` : "../img/search.png")
+    cardImg.setAttribute('src', portfolioData.img ? `https://xn----htbkerlri6b4b.uz/${portfolioData.img}` : "../img/search.png")
     cardImg.setAttribute('alt', "Чистый дом")
 
     const cardTitle = elProductCard.querySelector('.servicePage-list__title');
@@ -50,7 +50,7 @@ const renderFunction = (array = portfolioData) => {
 }
 // Fetch get
 
-fetch('https://developer1.pythonanywhere.com/main/get-external-blog')
+fetch('https://xn----htbkerlri6b4b.uz/main/get-external-blog')
 .then(res=>res.json())
 .then(data =>{
     localStorage.setItem('cardData', JSON.stringify(data))
@@ -122,7 +122,7 @@ async function postData(url = '', data = {}) {
         order: orderId
     }
 
-    postData('https://developer1.pythonanywhere.com/client/external-client-create', data)
+    postData('https://xn----htbkerlri6b4b.uz/client/external-client-create', data)
     .then((data) => {
       (data.fullname[0] == 'This field may not be blank.') ? alert('Произошло ошибка ведите данные заново') : alert("Ваш заказ принет! В кратчайшие сроки наш оператор позвонит.")
     }).catch((err)=>{
